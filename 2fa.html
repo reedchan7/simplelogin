@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SimpleLogin - Two-Factor Authentication</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo"><a href="index.html">SimpleLogin</a></div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="login-container">
+          <h1>Two-Factor Authentication</h1>
+
+          <!-- Container for the error flash message -->
+          <div id="flash-error-container"></div>
+
+          <form id="twoFactorForm">
+            <div class="form-group">
+              <label for="app_totp" id="session-otp-input-label"
+                >Authentication Code</label
+              >
+              <input
+                type="text"
+                name="app_otp"
+                id="app_totp"
+                value=""
+                aria-labelledby="session-otp-input-label"
+                aria-describedby="session-otp-input-description"
+                autocomplete="off"
+                autofocus="autofocus"
+                class="form-control input-block js-verification-code-input-auto-submit mb-2"
+                inputmode="numeric"
+                pattern="([0-9]{6})|([0-9a-fA-F]{5}-?[0-9a-fA-F]{5})"
+                placeholder="XXXXXX"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary">Verify</button>
+            </div>
+            <small class="form-text text-muted">
+              Open your two-factor authenticator (TOTP) app or browser extension
+              to view your authentication code.
+            </small>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 SimpleLogin. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jssha@3.2.0/dist/sha.js"></script>
+    <script src="2fa.js"></script>
+  </body>
+</html>

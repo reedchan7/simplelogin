@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SimpleLogin - User Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo"><a href="dashboard.html">SimpleLogin</a></div>
+        <nav>
+          <ul>
+            <li><span id="welcome-user">Welcome, User</span></li>
+            <li><a href="#" id="logout-btn">Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="dashboard">
+          <h1>User Dashboard</h1>
+          <div class="dashboard-content">
+            <div class="card">
+              <h2>Account Information</h2>
+              <p>Username: <span id="dashboard-username">test</span></p>
+              <p>Login Status: <span class="success-text">Verified</span></p>
+              <p>Last Login: <span id="last-login">Just now</span></p>
+            </div>
+
+            <div class="card">
+              <h2>Quick Actions</h2>
+              <button class="btn">Update Profile</button>
+              <button class="btn">Change Password</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 SimpleLogin. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+  </body>
+</html>

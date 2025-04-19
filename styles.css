@@ -1,0 +1,338 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #2d7af6;
+}
+
+a:hover {
+    color: #1a5dce;
+}
+
+ul {
+    list-style: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1f883d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #1c8139;
+}
+
+.btn-primary {
+    background-color: #1f883d;
+    color: white;
+    width: 100%;
+    padding: 12px;
+}
+
+.error-message {
+    color: #e53935;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.success-text {
+    color: #43a047;
+    font-weight: bold;
+}
+
+/* Header */
+header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2d7af6;
+}
+
+.logo a {
+    color: #2d7af6;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #333;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #2d7af6;
+}
+
+.register-btn {
+    background-color: #2d7af6;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+}
+
+.register-btn:hover {
+    background-color: #1a5dce;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+/* Login Container */
+.login-container {
+    max-width: 450px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #2d7af6;
+    box-shadow: 0 0 0 2px rgba(45, 122, 246, 0.2);
+}
+
+.form-text {
+    display: block;
+    margin-top: 8px;
+    color: #666;
+    font-size: 14px;
+}
+
+.form-footer {
+    margin-top: 25px;
+    text-align: center;
+    color: #666;
+}
+
+.info-text {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Dashboard */
+.dashboard {
+    padding: 40px 0;
+}
+
+.dashboard h1 {
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+}
+
+.dashboard-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+}
+
+.card p {
+    margin-bottom: 12px;
+    color: #666;
+}
+
+.card .btn {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .hero p {
+        font-size: 18px;
+    }
+    
+    .login-container {
+        margin: 30px 15px;
+    }
+    
+    .dashboard-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+    header .container {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        margin-top: 15px;
+    }
+}
+
+/* Flash message styles (Error specific) */
+#flash-error-container .flash {
+    position: relative;
+    padding: 15px 20px;
+    margin-bottom: 20px; /* Add margin below the flash message */
+    border: 1px solid transparent;
+    border-radius: 6px;
+}
+
+#flash-error-container .flash-full {
+    width: 100%;
+}
+
+#flash-error-container .flash-error {
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+}
+
+#flash-error-container .flash-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    line-height: 1;
+    color: inherit;
+    opacity: 0.5;
+    cursor: pointer;
+    padding: 5px;
+}
+
+#flash-error-container .flash-close:hover {
+    opacity: 1;
+}
+
+#flash-error-container .flash-close svg {
+    display: block;
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+#flash-error-container .js-flash-alert {
+    padding-right: 40px; /* Space for the close button */
+}
+
+/* Spinner styles */
+.spinner {
+    display: inline-block;
+    margin-left: 5px;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+} 
