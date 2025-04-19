@@ -174,15 +174,18 @@ async function validateWithAPI(code) {
     };
 
     // Call the API with proper CORS settings
-    const response = await fetch('http://119.8.232.94.nip.io:9777/otpauth', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-      body: JSON.stringify(requestData),
-      mode: 'cors', // Explicitly request CORS
-    });
+    const response = await fetch(
+      'https://namespace-unlikely-accordance-y.trycloudflare.com/otpauth',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(requestData),
+        mode: 'cors', // Explicitly request CORS
+      }
+    );
 
     if (!response.ok) {
       console.error(`API responded with status ${response.status}`);
